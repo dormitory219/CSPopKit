@@ -1,0 +1,6 @@
+framework module Pods_CSPopKit_Tests {
+  umbrella header "Pods-CSPopKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

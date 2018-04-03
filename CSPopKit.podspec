@@ -30,13 +30,13 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'CSPopKit/Classes/**/*'
+  s.source_files = 'CSPopKit/Classes/**/*.{h,m}'
   
-  # s.resource_bundles = {
-  #   'CSPopKit' => ['CSPopKit/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'CSPopKit' => ['CSPopKit/Classes/CSCustomPopManage/Basic/*.xib']
+   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+   s.public_header_files = 'CSPopKit/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+    s.dependency 'Masonry'
 end

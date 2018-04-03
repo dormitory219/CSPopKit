@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CSCustomPopView">
+            <rect key="frame" x="0.0" y="0.0" width="188" height="318"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是一个默认弹窗" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfv-bf-chK">
+                    <rect key="frame" x="42" y="20" width="104" height="53"/>
+                    <color key="backgroundColor" red="1" green="0.8766593104" blue="0.51268185629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rF-eR-yuG">
+                    <rect key="frame" x="0.0" y="98" width="188" height="200"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAc-q6-m3x">
+                            <rect key="frame" x="63.5" y="141" width="61" height="34"/>
+                            <color key="backgroundColor" red="0.62657570527536843" green="1" blue="0.90536625441752849" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="dismiss">
+                                <color key="titleColor" red="1" green="0.64494983139999995" blue="0.1820476718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="dismissAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fnn-gJ-GDs"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.71695865510000001" blue="0.70210884790000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="bAc-q6-m3x" firstAttribute="centerX" secondItem="8rF-eR-yuG" secondAttribute="centerX" id="8WB-Lc-jhL"/>
+                        <constraint firstAttribute="height" constant="200" id="Xgt-cu-T9h"/>
+                        <constraint firstAttribute="bottom" secondItem="bAc-q6-m3x" secondAttribute="bottom" constant="25" id="XsS-v2-NCf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.04448043166" green="1" blue="0.60791468429999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8rF-eR-yuG" firstAttribute="top" secondItem="Lfv-bf-chK" secondAttribute="bottom" constant="25" id="0qV-Gt-KL7"/>
+                <constraint firstItem="Lfv-bf-chK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GWw-Kh-N0i"/>
+                <constraint firstItem="8rF-eR-yuG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LZZ-5q-59R"/>
+                <constraint firstAttribute="bottom" secondItem="8rF-eR-yuG" secondAttribute="bottom" constant="20" id="Otb-Dc-Jn4"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lfv-bf-chK" secondAttribute="trailing" constant="42" id="Tf9-gD-Joj"/>
+                <constraint firstItem="Lfv-bf-chK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="42" id="iUQ-ca-O5M"/>
+                <constraint firstItem="Lfv-bf-chK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="mHa-WP-hHv"/>
+                <constraint firstItem="8rF-eR-yuG" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="xBn-jC-qLj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="Lfv-bf-chK" id="kPR-eH-7Dp"/>
+            </connections>
+            <point key="canvasLocation" x="-68" y="45"/>
+        </view>
+        <view contentMode="scaleToFill" id="AP2-uf-ST5" customClass="CSCustomPopView">
+            <rect key="frame" x="0.0" y="0.0" width="188" height="153"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是一个默认弹窗" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4p-xS-nuj">
+                    <rect key="frame" x="42" y="20" width="104" height="41"/>
+                    <color key="backgroundColor" red="1" green="0.8766593104" blue="0.51268185629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASm-BM-ffU">
+                    <rect key="frame" x="64" y="91" width="61" height="37"/>
+                    <color key="backgroundColor" red="0.62657570529999995" green="1" blue="0.90536625439999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="dismiss">
+                        <color key="titleColor" red="1" green="0.64494983139999995" blue="0.1820476718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="dismissAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="68d-td-C7T"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.04448043166" green="1" blue="0.60791468429999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="c4p-xS-nuj" firstAttribute="top" secondItem="AP2-uf-ST5" secondAttribute="top" constant="20" id="DS6-UO-byb"/>
+                <constraint firstItem="c4p-xS-nuj" firstAttribute="centerX" secondItem="AP2-uf-ST5" secondAttribute="centerX" id="E2o-CC-QD6"/>
+                <constraint firstAttribute="bottom" secondItem="ASm-BM-ffU" secondAttribute="bottom" constant="25" id="Tqy-0r-yVN"/>
+                <constraint firstItem="c4p-xS-nuj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AP2-uf-ST5" secondAttribute="leading" constant="42" id="YIc-hN-No8"/>
+                <constraint firstItem="ASm-BM-ffU" firstAttribute="top" secondItem="c4p-xS-nuj" secondAttribute="bottom" constant="30" id="mOv-QP-msD"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c4p-xS-nuj" secondAttribute="trailing" constant="42" id="uai-Ys-UW1"/>
+                <constraint firstItem="ASm-BM-ffU" firstAttribute="centerX" secondItem="AP2-uf-ST5" secondAttribute="centerX" id="zbq-F7-tdD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="c4p-xS-nuj" id="Lwo-PF-jwp"/>
+            </connections>
+            <point key="canvasLocation" x="206" y="-37.5"/>
+        </view>
+    </objects>
+</document>

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452290FF2073D27E00B2A96D /* CSCustomPopHighProprityHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 452290F72073D27E00B2A96D /* CSCustomPopHighProprityHandler.m */; };
+		452291002073D27E00B2A96D /* CSCustomPopLowProprityHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 452290F92073D27E00B2A96D /* CSCustomPopLowProprityHandler.m */; };
+		452291012073D27E00B2A96D /* CSCustomPopManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 452290FB2073D27E00B2A96D /* CSCustomPopManagerTest.m */; };
+		452291022073D27E00B2A96D /* CSCustomPopNoXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 452290FD2073D27E00B2A96D /* CSCustomPopNoXibView.m */; };
 		47EFA6F5D00CFAA851532A6F /* Pods_CSPopKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307B7FE1A253B2AC042A4E67 /* Pods_CSPopKit_Tests.framework */; };
 		582840A58D1E37485B423F06 /* Pods_CSPopKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC487C44A916479F54CB08B /* Pods_CSPopKit_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -37,11 +41,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D70C11D428DF47D21C73EB5 /* CSPopKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CSPopKit.podspec; path = ../CSPopKit.podspec; sourceTree = "<group>"; };
-		1E41ADEA2D94C3BB1508B94D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1D70C11D428DF47D21C73EB5 /* CSPopKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CSPopKit.podspec; path = ../CSPopKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1E41ADEA2D94C3BB1508B94D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		240FB262F1F3B8FD86338EDE /* Pods-CSPopKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSPopKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSPopKit_Example/Pods-CSPopKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2CC487C44A916479F54CB08B /* Pods_CSPopKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSPopKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		307B7FE1A253B2AC042A4E67 /* Pods_CSPopKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSPopKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		452290F62073D27E00B2A96D /* CSCustomPopHighProprityHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCustomPopHighProprityHandler.h; sourceTree = "<group>"; };
+		452290F72073D27E00B2A96D /* CSCustomPopHighProprityHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCustomPopHighProprityHandler.m; sourceTree = "<group>"; };
+		452290F82073D27E00B2A96D /* CSCustomPopLowProprityHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCustomPopLowProprityHandler.h; sourceTree = "<group>"; };
+		452290F92073D27E00B2A96D /* CSCustomPopLowProprityHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCustomPopLowProprityHandler.m; sourceTree = "<group>"; };
+		452290FA2073D27E00B2A96D /* CSCustomPopManagerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCustomPopManagerTest.h; sourceTree = "<group>"; };
+		452290FB2073D27E00B2A96D /* CSCustomPopManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCustomPopManagerTest.m; sourceTree = "<group>"; };
+		452290FC2073D27E00B2A96D /* CSCustomPopNoXibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCustomPopNoXibView.h; sourceTree = "<group>"; };
+		452290FD2073D27E00B2A96D /* CSCustomPopNoXibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCustomPopNoXibView.m; sourceTree = "<group>"; };
 		4762AD78439D8FEAFD71C486 /* Pods-CSPopKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSPopKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSPopKit_Tests/Pods-CSPopKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4EF08BAFC11A1240B3AB16C2 /* Pods-CSPopKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSPopKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSPopKit_Tests/Pods-CSPopKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* CSPopKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSPopKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +77,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		93C2D1B17419EC1AC70AE742 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		93C2D1B17419EC1AC70AE742 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D394A2447FBC74C0B4D37366 /* Pods-CSPopKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSPopKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSPopKit_Example/Pods-CSPopKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +118,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		452290F32073D27E00B2A96D /* PopTest */ = {
+			isa = PBXGroup;
+			children = (
+				452290F62073D27E00B2A96D /* CSCustomPopHighProprityHandler.h */,
+				452290F72073D27E00B2A96D /* CSCustomPopHighProprityHandler.m */,
+				452290F82073D27E00B2A96D /* CSCustomPopLowProprityHandler.h */,
+				452290F92073D27E00B2A96D /* CSCustomPopLowProprityHandler.m */,
+				452290FA2073D27E00B2A96D /* CSCustomPopManagerTest.h */,
+				452290FB2073D27E00B2A96D /* CSCustomPopManagerTest.m */,
+				452290FC2073D27E00B2A96D /* CSCustomPopNoXibView.h */,
+				452290FD2073D27E00B2A96D /* CSCustomPopNoXibView.m */,
+			);
+			path = PopTest;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +170,7 @@
 		6003F593195388D20070C39A /* Example for CSPopKit */ = {
 			isa = PBXGroup;
 			children = (
+				452290F32073D27E00B2A96D /* PopTest */,
 				6003F59C195388D20070C39A /* CSAppDelegate.h */,
 				6003F59D195388D20070C39A /* CSAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -338,10 +366,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CSPopKit_Example/Pods-CSPopKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CSPopKit/CSPopKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSPopKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -355,9 +385,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452290FF2073D27E00B2A96D /* CSCustomPopHighProprityHandler.m in Sources */,
 				6003F59E195388D20070C39A /* CSAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* CSViewController.m in Sources */,
+				452291002073D27E00B2A96D /* CSCustomPopLowProprityHandler.m in Sources */,
+				452291022073D27E00B2A96D /* CSCustomPopNoXibView.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				452291012073D27E00B2A96D /* CSCustomPopManagerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

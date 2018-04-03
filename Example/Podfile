@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'CSPopKit_Example' do
   pod 'CSPopKit', :path => '../'
-
+  
   target 'CSPopKit_Tests' do
     inherit! :search_paths
 

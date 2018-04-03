@@ -1,0 +1,6 @@
+framework module CSPopKit {
+  umbrella header "CSPopKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
