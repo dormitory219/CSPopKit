@@ -136,13 +136,16 @@ fromViewController:(UIViewController *)viewController;
 ```
 
 ##### 其他1：
+CSPopViewManager
 该弹窗方案提供一套弹窗优先级控制逻辑，每个弹窗业务都可以自定义自己的优先级priority，规定界面上只允许展示一个弹窗。当present一个弹窗a，首先判断当前是否有弹窗展示，没有则直接展示，若有弹窗b，比较弹窗a和弹窗b的优先级，如果a优先级高于b，dismiss当前展示的弹窗b，再present弹窗a，如果a优先级低，弹窗a取消这次present。
 这套优先级控制通过该模块控制：
+
 ![Alt text](https://github.com/dormitory219/CSPopKit/blob/master/README/屏幕快照%202018-04-04%20下午11.44.53.png)
 
 
 
 #### 其他2:
+CSPopController
 
 ![Alt text](https://github.com/dormitory219/CSPopKit/blob/master/README/屏幕快照%202018-04-04%20下午11.39.12.png)
 
