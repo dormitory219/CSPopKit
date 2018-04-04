@@ -31,7 +31,7 @@ CSPopKit is available under the MIT license. See the LICENSE file for more info.
 **CSPopKit是从项目中抽离出的一套弹窗框架，旨在为app内所有的弹窗业务提供一套规范的实现。**
 
 在我司项目中，经过CSPopkit这套方案，重构的弹窗业务已经独立成一个模块，结构如下图
-![Alt text](./屏幕快照 2018-04-04 下午2.03.07.png)
+![Alt text](https://github.com/dormitory219/CSPopKit/blob/master/README/屏幕快照%202018-04-04%20下午2.03.07.png)
 
 
 #### 背景：
@@ -138,21 +138,21 @@ fromViewController:(UIViewController *)viewController;
 ##### 其他1：
 该弹窗方案提供一套弹窗优先级控制逻辑，每个弹窗业务都可以自定义自己的优先级priority，规定界面上只允许展示一个弹窗。当present一个弹窗a，首先判断当前是否有弹窗展示，没有则直接展示，若有弹窗b，比较弹窗a和弹窗b的优先级，如果a优先级高于b，dismiss当前展示的弹窗b，再present弹窗a，如果a优先级低，弹窗a取消这次present。
 这套优先级控制通过该模块控制：
-![Alt text](./屏幕快照 2018-04-04 下午11.44.53.png)
+![Alt text](https://github.com/dormitory219/CSPopKit/blob/master/README/屏幕快照%202018-04-04%20下午11.44.53.png)
 
 
 
 #### 其他2:
 
-![Alt text](./屏幕快照 2018-04-04 下午11.39.12.png)
+![Alt text](https://github.com/dormitory219/CSPopKit/blob/master/README/屏幕快照%202018-04-04%20下午11.39.12.png)
 
 CSPopController是一个独立的弹窗展示控件，可以单独使用，使用很简单:
-内部就是通过外界传入的弹窗视图进行包裹，
+内部就是通过外界传入的弹窗视图contentView进行包裹，
 ```
 - (instancetype)initWithContent:(UIView *)content;
 ```
 
-在外界直接通过present,dissmiss方法来展示，关闭弹窗。
+在外界直接通过present,dissmiss方法来present，dismiss弹窗。
 
 ```
 //present
@@ -163,4 +163,18 @@ CSPopController是一个独立的弹窗展示控件，可以单独使用，使�
 ```
 
 唯一需要注意的是，传入的conyentView需要遵循autolayout布局，而且需要添加底部约束，popcontroller会在内部通过约束帮你做到高度自适应。
+
+popTheme的主题定制
+```
++ (instancetype)defaultTheme
+{
+    CSPopTheme *defaultTheme = [[CSPopTheme alloc] init];
+    
+//圆角，宽度，弹出，消失动画，动画时间，是否支持点击空白消除等等  defaultTheme.maskTypeTheme(CSPopThemeMaskTypeDimmed).cornerRadiusTheme(16.0f).maxPopupWidthTheme(280.0f).animationPresentionDurationTheme(0.6f).animationDismissDurationTheme(0.6f).shouldDismissOnBackgroundTouchTheme(NO).popThemePresentationStyleTheme(CSPPopThemePresentationStyleSlideInFromTopAndAngleBounce).popThemeDismissStyleTheme(CSPPopThemeDismissStyleSlideInToBottomAndAngle).horizontalOffsetTheme(0.f).verticalOffsetTheme(0.f);
+    return defaultTheme;
+}
+
+```
+
+
 
