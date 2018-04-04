@@ -34,10 +34,10 @@ CSPopKit is available under the MIT license. See the LICENSE file for more info.
 ![Alt text](./屏幕快照 2018-04-04 下午2.03.07.png)
 
 
-####背景：
+#### 背景：
 多人维护的项目，针对产品需求需要定制各种弹窗，因为没有一套规范实现，每个人根据自己的代码习惯定制不同风格的弹窗，久而久之，项目内出现了各种各种的弹窗代码，有的是直接定制view，添加到superView上，有的是用controller定制，有的加window上，这些杂乱的代码分散在各处，无法清晰梳理出弹窗相关业务的逻辑，而且由于各种各种的弹窗增多，触发时机不同，有可能会出现界面上出现多个弹窗的case，这时候如果要做弹窗的优先级展示，因没有一个底层去维护这些弹窗逻辑，根本就无力做到弹窗的分级控制，基于这些，对项目中的弹窗进行了全部重构。
 
-####CSPopKit使用：
+#### CSPopKit使用：
 
 ```
 //CSPopKit定义的弹窗三要素组件拼装
@@ -54,7 +54,7 @@ CSCustomPopControllerLoader *popLoader = [CSCustomPopControllerLoader loader];
 你可以理解CSPopKit这套方案为：
 CSCustomPopManager为一个厨子（工具类），通过不同的食材元素（弹窗元素）拼接，烹饪出各种不同的食品（弹窗）。
 
-####CSPopKit设计：
+#### CSPopKit设计：
 
 弹窗这类业务较轻，而且多重业务弹窗业务相近，而且同一个app内的弹窗风格相近，所以在设计时容易直接想到用一个manager去中心化管理弹窗，视图在尽量重用的基础上根据业务的不同做各种区分判断，弹窗一多，manager成了一个业务处理的中心爆炸类，包含各类弹窗业务展示条件判断，弹窗视图上元素点击业务处理，数据埋点处理等等，视图这层同样也因为被复用的太多，各种元素选择性的hidden，同一按钮事件根据业务区分不同的delegate回调出去，整个业务线已经纠缠的傻傻分不清了。
 
@@ -135,7 +135,7 @@ completeBlock:(void (^)(id))completeBlock
 fromViewController:(UIViewController *)viewController;
 ```
 
-#####其他1：
+##### 其他1：
 该弹窗方案提供一套弹窗优先级控制逻辑，每个弹窗业务都可以自定义自己的优先级priority，规定界面上只允许展示一个弹窗。当present一个弹窗a，首先判断当前是否有弹窗展示，没有则直接展示，若有弹窗b，比较弹窗a和弹窗b的优先级，如果a优先级高于b，dismiss当前展示的弹窗b，再present弹窗a，如果a优先级低，弹窗a取消这次present。
 这套优先级控制通过该模块控制：
 ![Alt text](./屏幕快照 2018-04-04 下午11.44.53.png)
