@@ -79,7 +79,7 @@ CSCustomPopManager为一个厨子（工具类），通过不同的食材元素�
 
 - (CSCustomPopView *)view
 {
-return [CSCustomPopView popView];
+    return [CSCustomPopView popView];
 }
 ```
 
@@ -91,12 +91,12 @@ return [CSCustomPopView popView];
 
 - (void)setContent:(UIView *)content
 {
-CSPopController *popController = [[CSPopController alloc] initWithContent:content];
-self.popController = popController;
+    CSPopController *popController = [[CSPopController alloc] initWithContent:content];
+    self.popController = popController;
 
-//通过popTheme来定义不同的展示风格
-CSPopTheme *theme = [CSPopTheme defaultTheme];
-popController.theme = theme;
+    //通过popTheme来定义不同的展示风格
+    CSPopTheme *theme = [CSPopTheme defaultTheme];
+    popController.theme = theme;
 }
 
 ```
@@ -109,18 +109,18 @@ popController.theme = theme;
 
 - (void)dismissPopView:(CSCustomPopView *)popView
 {
-[[CSPopViewManager sharedManager] removePop:self];
-[self.popController dismissPopControllerAnimated:YES];
-self.reformer = nil;
-self.popView = nil;
-self.popController = nil;
-self.completeBlock = nil;
-self.fromViewController = nil;
-//remove self from manager handlers array
-if (self.delegate && [self.delegate respondsToSelector:@selector(removeHandler:)])
-{
-[self.delegate removeHandler:self];
-}
+    [[CSPopViewManager sharedManager] removePop:self];
+    [self.popController dismissPopControllerAnimated:YES];
+    self.reformer = nil;
+    self.popView = nil;
+    self.popController = nil;
+    self.completeBlock = nil;
+    self.fromViewController = nil;
+    //remove self from manager handlers array
+    if (self.delegate && [self.delegate respondsToSelector:@selector(removeHandler:)])
+    {
+       [self.delegate removeHandler:self];
+    }
 }
 
 ```
@@ -137,6 +137,7 @@ fromViewController:(UIViewController *)viewController;
 
 ##### 其他1：
 CSPopViewManager
+
 该弹窗方案提供一套弹窗优先级控制逻辑，每个弹窗业务都可以自定义自己的优先级priority，规定界面上只允许展示一个弹窗。当present一个弹窗a，首先判断当前是否有弹窗展示，没有则直接展示，若有弹窗b，比较弹窗a和弹窗b的优先级，如果a优先级高于b，dismiss当前展示的弹窗b，再present弹窗a，如果a优先级低，弹窗a取消这次present。
 这套优先级控制通过该模块控制：
 
