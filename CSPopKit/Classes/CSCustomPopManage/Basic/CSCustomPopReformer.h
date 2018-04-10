@@ -3,7 +3,7 @@
 //  CSPopKit
 //
 //  Created by joy_yu on 2018/1/12.
-//  Copyright © 2017年 IntSig Information Co., Ltd. All rights reserved.
+//  Copyright © 2018年 joy_yu. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

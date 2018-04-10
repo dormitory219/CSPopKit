@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## CSPopKit
 
-Copyright (c) 2018 dormitory219 <289067005@qq.com>
+Copyright (c) 2018 joy_yu <289067005@qq.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
