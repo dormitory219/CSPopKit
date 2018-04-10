@@ -1,14 +1,14 @@
 //
-//  CSCustomPopNoXibView.m
+//  CSCustomPopTestView.m
 //  CSPopKit
 //
 //  Created by joy_yu on 2018/1/12.
 //  Copyright © 2017年 IntSig Information Co., Ltd. All rights reserved.
 //
 
-#import "CSCustomPopNoXibView.h"
+#import "CSCustomPopTestView.h"
 
-@implementation CSCustomPopNoXibView
+@implementation CSCustomPopTestView
 
 - (void)dealloc
 {

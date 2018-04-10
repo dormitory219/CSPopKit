@@ -7,9 +7,12 @@
 //
 
 #import "CSCustomPopManagerTest.h"
-#import "CSCustomPopManagerHeader.h"
+#import "CSCustomTestViewLoader.h"
+#import "CSCustomTestPopLoader.h"
+#import "CSCustomPopHandler.h"
 #import "CSCustomPopLowProprityHandler.h"
 #import "CSCustomPopHighProprityHandler.h"
+#import "CSCustomPopManager.h"
 
 @implementation CSCustomPopManagerTest
 
@@ -18,9 +21,9 @@
  */
 + (void)testPopView
 {
-    CSCustomPopHandler *handler = [CSCustomPopHandler handler];
-    CSCustomPopViewLoader *viewloader = [CSCustomPopViewLoader loader];
-    CSCustomPopControllerLoader *popLoader = [CSCustomPopControllerLoader loader];
+    CSCustomPopHighProprityHandler *handler = [CSCustomPopHighProprityHandler handler];
+    CSCustomTestViewLoader *viewloader = [CSCustomTestViewLoader loader];
+    CSCustomTestPopLoader *popLoader = [CSCustomTestPopLoader loader];
     
     [[CSCustomPopManager shareManager] showPopViewWithHandler:handler viewLoader:viewloader popControllerLoader:popLoader completeBlock:^(id data) {
         
@@ -46,9 +49,8 @@
     CSCustomPopHandler *handler = [CSCustomPopHandler handler];
     CSCustomPopHighProprityHandler *highPriorityHandler = [CSCustomPopHighProprityHandler handler];
     CSCustomPopLowProprityHandler *lowPriorityHandler = [CSCustomPopLowProprityHandler handler];
-    CSCustomPopViewLoader *viewloader = [CSCustomPopViewLoader loader];
-
-    CSCustomPopControllerLoader *popLoader = [CSCustomPopControllerLoader loader];
+    CSCustomTestViewLoader *viewloader = [CSCustomTestViewLoader loader];
+    CSCustomTestPopLoader *popLoader = [CSCustomTestPopLoader loader];
     
     NSMutableArray *handlers = [NSMutableArray arrayWithArray:@ [handler,lowPriorityHandler,highPriorityHandler]];
     

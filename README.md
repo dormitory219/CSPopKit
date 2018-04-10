@@ -41,9 +41,9 @@ CSPopKit is available under the MIT license. See the LICENSE file for more info.
 
 ```
 //CSPopKit定义的弹窗三要素组件拼装
-CSCustomPopHandler *handler = [CSCustomPopHandler handler];
-CSCustomPopViewLoader *viewloader = [CSCustomPopViewLoader loader];
-CSCustomPopControllerLoader *popLoader = [CSCustomPopControllerLoader loader];
+CSCustomPopHighProprityHandler *handler = [CSCustomPopHighProprityHandler handler];
+CSCustomTestViewLoader *viewloader = [CSCustomTestViewLoader loader];
+CSCustomTestPopLoader *popLoader = [CSCustomTestPopLoader loader];
 
 //CSCustomPopManager底层方法调用
 [[CSCustomPopManager shareManager] showPopViewWithHandler:handler viewLoader:viewloader popControllerLoader:popLoader completeBlock:^(id data) {

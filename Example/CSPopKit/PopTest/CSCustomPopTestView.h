@@ -1,5 +1,5 @@
 //
-//  CSCustomPopNoXibView.h
+//  CSCustomPopTestView.h
 //  CSPopKit
 //
 //  Created by joy_yu on 2018/1/12.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "CSCustomPopView.h"
 
-@interface CSCustomPopNoXibView : CSCustomPopView
+@interface CSCustomPopTestView : CSCustomPopView
 
 @end
