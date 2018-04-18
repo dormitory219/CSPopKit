@@ -161,15 +161,24 @@ static inline UIViewAnimationOptions UIViewAnimationCurveToAnimationOptions(UIVi
     NSTimeInterval duration = [(notification.userInfo)[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     UIViewAnimationCurve curve = [(notification.userInfo)[UIKeyboardAnimationCurveUserInfoKey] integerValue];
     CGRect popupViewIntersection = CGRectIntersection(self.content.frame, frame);
-    CGFloat intersectionHeight = popupViewIntersection.size.height + 5;
+    CGFloat margin;
+    if ([UIScreen mainScreen].bounds.size.width <= 320.f)
+    {
+        margin = 25;
+    }
+    else
+    {
+        margin = 80;
+    }
+    CGFloat intersectionHeight = popupViewIntersection.size.height + margin;
     if (intersectionHeight > 0)
     {
         [self.content mas_updateConstraints:^(MASConstraintMaker *make) {
-             (void)make.centerY.offset(-intersectionHeight);
+            (void)make.centerY.offset(-intersectionHeight);
         }];
         
         [UIView animateWithDuration:duration delay:0.0f options:UIViewAnimationCurveToAnimationOptions(curve) animations:^{
-            [self.content layoutIfNeeded];
+            [self.content.superview layoutIfNeeded];
         } completion:nil];
     }
 }
@@ -182,7 +191,7 @@ static inline UIViewAnimationOptions UIViewAnimationCurveToAnimationOptions(UIVi
         (void)make.center;
     }];
     [UIView animateWithDuration:duration delay:0.0f options:UIViewAnimationCurveToAnimationOptions(curve) animations:^{
-        [self.content layoutIfNeeded];
+        [self.content.superview layoutIfNeeded];
     } completion:nil];
 }
 

@@ -13,14 +13,14 @@
 + (instancetype)defaultTheme
 {
     CSPopTheme *defaultTheme = [[CSPopTheme alloc] init];
-    defaultTheme.maskTypeTheme(CSPopThemeMaskTypeDimmed).cornerRadiusTheme(16.0f).maxPopupWidthTheme(280.0f).animationPresentionDurationTheme(0.6f).animationDismissDurationTheme(0.6f).shouldDismissOnBackgroundTouchTheme(NO).popThemePresentationStyleTheme(CSPPopThemePresentationStyleSlideInFromTopAndAngleBounce).popThemeDismissStyleTheme(CSPPopThemeDismissStyleSlideInToBottomAndAngle).horizontalOffsetTheme(0.f).verticalOffsetTheme(0.f);
+    defaultTheme.maskTypeTheme(CSPopThemeMaskTypeDimmed).cornerRadiusTheme(16.0f).maxPopupWidthTheme(300.0f).animationPresentionDurationTheme(0.3f).animationDismissDurationTheme(0.3f).shouldDismissOnBackgroundTouchTheme(NO).popThemePresentationStyleTheme(CSPPopThemePresentationStyleFadeIn).popThemeDismissStyleTheme(CSPPopThemeDismissStyleFadeOut).horizontalOffsetTheme(0.f).verticalOffsetTheme(0.f);
     return defaultTheme;
 }
 
 + (instancetype)defaultGuideTheme
 {
     CSPopTheme *defaultTheme = [[CSPopTheme alloc] init];
-  defaultTheme.maskTypeTheme(CSPopThemeMaskTypeDimmed).cornerRadiusTheme(16.0f).maxPopupWidthTheme(300.0f).animationPresentionDurationTheme(0.8f).animationDismissDurationTheme(0.45f).shouldDismissOnBackgroundTouchTheme(NO).popThemePresentationStyleTheme(CSPPopThemePresentationStyleSlideInFromTop).popThemeDismissStyleTheme(CSPPopThemeDismissStyleSlideInToBottom).horizontalOffsetTheme(0.f).verticalOffsetTheme(0.f);
+    defaultTheme.maskTypeTheme(CSPopThemeMaskTypeDimmed).cornerRadiusTheme(16.0f).maxPopupWidthTheme(300.0f).animationPresentionDurationTheme(0.8f).animationDismissDurationTheme(0.45f).shouldDismissOnBackgroundTouchTheme(NO).popThemePresentationStyleTheme(CSPPopThemePresentationStyleSlideInFromTop).popThemeDismissStyleTheme(CSPPopThemeDismissStyleSlideInToBottom).horizontalOffsetTheme(0.f).verticalOffsetTheme(0.f);
     return defaultTheme;
 }
 
