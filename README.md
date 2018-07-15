@@ -31,7 +31,7 @@ CSPopKit is available under the MIT license. See the LICENSE file for more info.
 **CSPopKit是从项目中抽离出的一套弹窗框架，旨在为app内所有的弹窗业务提供一套规范的实现。**
 
 在我司项目中，经过CSPopkit这套方案，重构的弹窗业务已经独立成一个模块，结构如下图
-![结构](https://upload-images.jianshu.io/upload_images/1167475-c7955496f06e130a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Alt text](https://github.com/joy_yu/CSPopKit/blob/master/README/屏幕快照%202018-04-04%20下午2.03.07.png)
 
 
 #### 背景：
@@ -246,13 +246,15 @@ CSPopViewManager
 
 该弹窗方案提供一套弹窗优先级控制逻辑，每个弹窗业务都可以自定义自己的优先级priority，规定界面上只允许展示一个弹窗。当present一个弹窗a，首先判断当前是否有弹窗展示，没有则直接展示，若有弹窗b，比较弹窗a和弹窗b的优先级，如果a优先级高于b，dismiss当前展示的弹窗b，再present弹窗a，如果a优先级低，弹窗a取消这次present。这套优先级控制逻辑比较简单，如果你有更复杂的控制逻辑，可以在此基础上修改。
 这套优先级控制通过该模块控制：
-![CSPopViewManager](https://upload-images.jianshu.io/upload_images/1167475-6a8be51d196b7806.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![Alt text](https://github.com/joy_yu/CSPopKit/blob/master/README/屏幕快照%202018-04-04%20下午11.44.53.png)
+
 
 
 #### 其他2:
 CSPopController
 
-![CSPopController](https://upload-images.jianshu.io/upload_images/1167475-f889184d10e7a8d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Alt text](https://github.com/joy_yu/CSPopKit/blob/master/README/屏幕快照%202018-04-04%20下午11.39.12.png)
 
 CSPopController是一个独立的弹窗展示控件，可以单独使用，使用很简单:
 内部就是通过外界传入的弹窗视图contentView进行包裹，
