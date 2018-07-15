@@ -539,7 +539,7 @@
 				GCC_PREFIX_HEADER = "CSPopKit/CSPopKit-Prefix.pch";
 				INFOPLIST_FILE = "CSPopKit/CSPopKit-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.intsig.CSPopKit;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.intsig.CSPopKit-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -555,7 +555,7 @@
 				GCC_PREFIX_HEADER = "CSPopKit/CSPopKit-Prefix.pch";
 				INFOPLIST_FILE = "CSPopKit/CSPopKit-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.intsig.CSPopKit;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.intsig.CSPopKit-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
