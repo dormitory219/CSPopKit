@@ -20,6 +20,8 @@
 
 @property (nonatomic, weak) CSPopController *popController;
 
+@property (nonatomic,assign) BOOL isNotDismiss;
+
 - (void)animationWithPop:(BOOL)isPop;
 
 @end

@@ -24,6 +24,13 @@
     }
     switch (style)
     {
+        case CSPPopThemePresentationStyleNone:
+        {
+            self.maskView.alpha = 1.0;
+            self.content.alpha = 1.0;
+            return;
+            break;
+        }
         case CSPPopThemePresentationStyleFadeIn:
         {
             self.maskView.alpha = 0.0;
@@ -49,14 +56,29 @@
             translatePoint = CGPointMake([UIScreen mainScreen].bounds.size.width/2,0);
             break;
             
+        case CSPPopThemeDismissStyleNone:
+        {
+            self.maskView.alpha = 0.0;
+            self.content.alpha = 0.0;
+            if (!self.isNotDismiss)
+            {
+                [self.maskView removeFromSuperview];
+                [self.content removeFromSuperview];
+            }
+            return;
+            break;
+        }
         case CSPPopThemeDismissStyleFadeOut:
         {
             [UIView animateWithDuration:self.theme.animationDismissDuration animations:^{
                 self.maskView.alpha = 0.0;
                 self.content.alpha = 0.0;
             } completion:^(BOOL finished) {
-                [self.maskView removeFromSuperview];
-                [self.content removeFromSuperview];
+                if (!self.isNotDismiss)
+                {
+                    [self.maskView removeFromSuperview];
+                    [self.content removeFromSuperview];
+                }
             }];
             return;
             break;
@@ -101,7 +123,7 @@
             self.maskView.alpha = 1.0;
             self.content.alpha = 1.0;
         } completion:^(BOOL finished) {
-           
+            
         }];
     }
     else
@@ -130,12 +152,16 @@
             self.content.alpha = 0.0;
             
         } completion:^(BOOL finished) {
-            [self.maskView removeFromSuperview];
-            [self.content removeFromSuperview];
-             [[NSNotificationCenter defaultCenter] postNotificationName:CSPopControllerDissmissNotification object:self];
+            if (!self.isNotDismiss)
+            {
+                [self.maskView removeFromSuperview];
+                [self.content removeFromSuperview];
+            }
+            [[NSNotificationCenter defaultCenter] postNotificationName:CSPopControllerDissmissNotification object:self];
         }];
     }
 }
 
 
 @end
+

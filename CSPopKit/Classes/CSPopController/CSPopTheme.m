@@ -59,6 +59,14 @@
         return self;
     };
 }
+- (CSPopTheme *(^)(CSPopThemeLocationType))popThemeLocationTheme
+{
+    return ^CSPopTheme *(CSPopThemeLocationType popThemeLocationTheme)
+    {
+        self.locationType = popThemeLocationTheme;
+        return self;
+    };
+}
 
 - (CSPopTheme *(^)(CGPoint))dismissPointTheme
 {
@@ -92,6 +100,15 @@
     return ^CSPopTheme *(CGFloat maxPopupWidth)
     {
         self.maxPopupWidth = maxPopupWidth;
+        return self;
+    };
+}
+
+- (CSPopTheme *(^)(BOOL))flexPopupWidthTheme
+{
+    return ^CSPopTheme *(BOOL flexPopupWidth)
+    {
+        self.flexPopupWidth = flexPopupWidth;
         return self;
     };
 }
@@ -133,3 +150,4 @@
 }
 
 @end
+
