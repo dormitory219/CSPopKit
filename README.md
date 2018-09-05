@@ -5,6 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/CSPopKit.svg?style=flat)](http://cocoapods.org/pods/CSPopKit)
 [![Platform](https://img.shields.io/cocoapods/p/CSPopKit.svg?style=flat)](http://cocoapods.org/pods/CSPopKit)
 
+https://github.com/dormitory219/CSPopKit.git
+
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
