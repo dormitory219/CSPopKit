@@ -12,6 +12,7 @@
 
 @interface CSPopAnimation : NSObject
 
+
 @property (nonatomic,strong) UIView *content;
 
 @property (nonatomic, strong) UIView *maskView;
